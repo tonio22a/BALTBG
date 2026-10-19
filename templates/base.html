@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>{% block title %}DGram{% endblock %}</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+
+    <!-- ЛЕВОЕ МЕНЮ -->
+        <div class="footer">
+            <a href="/contact"><button>Контакты</button></a>
+            <a href="https://t.me/baltbereg1" target="_blank"><button>Телеграм</button></a>
+            <h2>Балтийский Берег</h2>
+            <p>Сделано Project "AU"</p>
+        </div>
+
+    <!-- КОНТЕНТ СТРАНИЦЫ -->
+    {% block content %}{% endblock %}
+
+</body>
+</html>

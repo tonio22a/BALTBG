@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Вход</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="card">
+        {% if username %}
+            <h1>Привет, {{ username }}</h1>
+            <a href="/">
+                <button>Главная</button>
+            </a>
+        {% else %}
+            <h1>Вход</h1>
+            <form method="POST">
+                <input name="email" type="email" placeholder="Email" required>
+                <input name="password" type="password" placeholder="Пароль" required>
+                <button type="submit">Войти</button>
+            </form>
+            <p>Нет аккаунта? <a href="/register">Зарегистрироваться</a></p>
+        {% endif %}
+    </div>
+
+        <div class="footer">
+            <p>a Tigran Gevorkyan production</p>
+            <p>Dgram © 2026</p>
+        </div>
+</body>
+</html>

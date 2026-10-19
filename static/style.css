@@ -1,0 +1,649 @@
+/* 1. ГЛОБАЛЬНЫЙ СБРОС ОТСТУПОВ CHROME */
+*, *::before, *::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: #f0f2f5;
+    font-family: Arial, sans-serif;
+    display: flex;
+    flex-direction: column; 
+    align-items: center;    
+    min-height: 100vh;      
+    padding: 20px;
+}
+
+/* 2. ШАПКА (ДЛЯ ГЛАВНОЙ СТРАНИЦЫ) */
+.header-container {
+    display: flex;
+    align-items: center;    
+    width: 100%;            
+    max-width: 1200px;      
+    margin-bottom: 40px;    
+}
+
+.logo {
+    padding: 10px 0; 
+}
+
+
+.headerwelcome-container {
+    display: flex;
+    justify-content: center; /* центрирование по горизонтали */
+    align-items: flex-start; /* прижатие к верху */
+    padding-top: 20px;       /* отступ от верха экрана */
+    width: 100%;
+}
+.logoWEL {
+    padding: 10px 0;
+    text-align: center;
+}
+
+.brand-block {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; 
+}
+
+/* 3. СТИЛИ ДЛЯ ПЕРВОЙ КНОПКИ (В ШАПКЕ) */
+.crea {
+    margin-top: -27px; 
+    margin-left: 32px;
+}
+
+.crea a {
+    text-decoration: none;
+    display: inline-block;
+    width: 100px; 
+}
+
+.crea button {
+    display: block;
+    width: 100%;
+    padding: 5px 0;
+    font-family: inherit;
+    font-size: 16px;
+    font-weight: 600;
+    color: #1a73e8;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    background-color: transparent; 
+    transition: transform 0.1s ease;
+}
+
+/* 3. СТИЛИ ДЛЯ ПЕРВОЙ КНОПКИ (В ШАПКЕ) */
+.fr1 {
+    margin-top: -20px; 
+    margin-left: -20px;
+}
+
+.fr1 a {
+    text-decoration: none;
+    display: inline-block;
+    width: 100px; 
+}
+
+.fr1 button {
+    display: block;
+    width: 100%;
+    padding: 5px 0;
+    font-family: inherit;
+    font-size: 16px;
+    font-weight: 600;
+    color: #1a73e8;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    background-color: transparent; 
+    transition: transform 0.1s ease;
+}
+
+/* 3. СТИЛИ ДЛЯ ПЕРВОЙ КНОПКИ (В ШАПКЕ) */
+.wel {
+    margin-top: -27.5px; 
+    margin-left: 93px;
+}
+
+.wel a {
+    text-decoration: none;
+    display: inline-block;
+    width: 100px; 
+}
+
+.wel button {
+    display: block;
+    width: 100%;
+    padding: 5px 0;
+    font-family: inherit;
+    font-size: 16px;
+    font-weight: 600;
+    color: #1a73e8;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    background-color: transparent; 
+    transition: transform 0.1s ease;
+}
+
+.logout {
+    margin-top: -27.5px; 
+    margin-left: 163px;
+}
+
+.logout a {
+    text-decoration: none;
+    display: inline-block;
+    width: 100px; 
+}
+
+.logout button {
+    display: block;
+    width: 100%;
+    padding: 5px 0;
+    font-family: inherit;
+    font-size: 16px;
+    font-weight: 600;
+    color: #1a73e8;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    background-color: transparent; 
+    transition: transform 0.1s ease;
+}
+
+/* 4. СТИЛИ ДЛЯ ВТОРОЙ КНОПКИ (В КАРТОЧКЕ «СОЗДАТЕЛИ») */
+.home1 {
+    margin-top: 20px; /* Отступ сверху от текста до кнопки */
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+.home1 a {
+    text-decoration: none !important; /* Жестко запрещаем подчеркивание */
+    display: inline-flex;     
+    justify-content: center;  
+    align-items: center;
+    width: 140px;             
+}
+
+.home1 button {
+    display: flex;            
+    align-items: center;      
+    justify-content: center;  
+    width: 100%;
+    padding: 8px 0;           
+    
+    font-family: inherit;
+    font-size: 16px;
+    font-weight: 600;
+    color: #1a73e8;
+    border-radius: 6px;
+    cursor: pointer;
+    background-color: transparent; 
+    border: 2px solid #1a73e8;    
+    text-decoration: none !important; /* Убираем любые скрытые линии текста */
+    outline: none; /* Убираем черную рамку Chrome при клике */
+    transition: background-color 0.2s ease, transform 0.1s ease;
+}
+
+/* 5. КАРТОЧКА СТРАНИЦЫ СОЗДАТЕЛЕЙ */
+.cardcr {
+    background: white;
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    text-align: center;
+    max-width: 500px;       
+    width: 100%;
+    
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.cardwel {
+    background: white;
+    padding: 32px 25px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    text-align: left;
+    max-width: 600px;       
+    width: 100%;
+    
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+    justify-content: center;
+}
+
+.cardfr {
+    background: white;
+    /* Изменили padding: 40px сверху, 60px по бокам, 60px снизу */
+    padding: 40px 60px 60px 60px; 
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    text-align: center;
+    max-width: 500px;       
+    width: 100%;
+    
+    /* Задаем минимальную высоту, чтобы карточке было куда растягиваться */
+    min-height: 400px; 
+    
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* justify-content: center;  <-- Эту строку полностью удаляем или комментируем */
+}
+
+
+
+.card p {
+    margin: 10px 0; /* Чтобы текст внутри карточки не слипался */
+}
+
+/* Находим САМУЮ ПЕРВУЮ кнопку в карточке и толкаем её вниз */
+.cardfr .home1:first-of-type {
+    margin-top: auto; 
+}
+
+
+h1 {
+    color: #1a73e8;
+}
+
+h2 {
+    color: #1a73e8;
+}
+
+.cardwel {
+    padding-top: 30px;          
+    padding-left: 25px;    /* отступы всей карточки от краёв */
+    /* ... остальные стили карточки ... */
+}
+
+/* Текст слева, но с отступом от края карточки */
+.left {
+    text-align: left;
+    padding-left: 1px;       /* ← отступ от левого края карточки */
+    margin: 0;
+}
+
+/* Текст по центру карточки */
+.center {
+    text-align: center;
+    margin: 0;
+}
+
+/* Пустая строка-разделитель */
+.spacer {
+    margin: 0;
+    line-height: 1;
+}
+
+.date p {
+    margin-top: -70px;
+    margin-left: 1260px;
+    cursor: default; /* обычный курсор, не «рука» */
+    color: #1a73e8;  /* цвет как у обычного текста */
+    text-decoration: none;
+}
+
+/* Рамка Welcome */
+
+.box {
+    border: 1px solid #3b5998;
+    margin-bottom: 15px;
+}
+
+.box-header {
+    background-color: #3b5998;
+    color: white;
+    padding: 5px 10px;
+    font-weight: bold;
+}
+
+.box-content {
+    padding: 10px;
+    background-color: white;
+}
+
+/* Рамка Home */
+
+.boxH {
+    border: 1px solid #3b5998;
+    margin-bottom: 15px;
+    margin-left: 0;
+    width: 80%;
+    transform: translateX(400px);
+    
+}
+
+.box-headerH {
+    background-color: #3b5998;
+    color: white;
+    padding: 5px 10px;
+    font-weight: bold;
+}
+
+.box-contentH {
+    padding: 60px;
+    background-color: white;
+}
+
+
+/* Рамка FAQ */
+
+.telegram {
+    border: 1px solid #3b5998;
+    margin-bottom: 30px;
+    margin-left: 280px;        /* ← сдвиг вправо */
+    max-width: 1200px;          /* ← шире, больше места */
+    width: calc(100% - 200px); /* ← учитываем отступ */
+    background-color: white;
+}
+
+.telegram-header {
+    background-color: #3b5998;
+    color: white;
+    padding: 5px 10px;
+    font-weight: bold;
+}
+
+.telegram-content {
+    padding-top: 20px;      /* сверху — 20px */
+    padding-right: 30px;    /* справа — 30px */
+    padding-bottom: 35px;  /* СНИЗУ — 200px (много места вниз) */
+    padding-left: 30px;     /* слева — 30px */
+    text-align: left;
+    background-color: white;
+}
+
+/* Рамка ITEMS */
+.items {
+    position: fixed;        /* ← всегда на одном месте */
+    top: 23px;             /* ← отступ сверху */
+    left: 20px;             /* ← отступ слева */
+    width: 150px;
+    border: 1px solid #3b5998;
+    background-color: white;
+}
+
+.items-header {
+    background-color: #3b5998;
+    color: white;
+    padding: 5px 10px;
+    font-weight: bold;
+}
+
+.items-content {
+    padding-top: 20px;      /* сверху — 20px */
+    padding-right: 52px;    /* справа — 30px */
+    padding-bottom: 5px;  /* СНИЗУ — 200px (много места вниз) */
+    padding-left: 30px;     /* слева — 30px */
+    text-align: left;
+    background-color: white;
+}
+
+/* Текст стиль для ИТЕМЫ */
+
+/* профиль */
+.profile {
+    margin-top: -20px; 
+    margin-left: -35px;
+}
+
+.profile a {
+    text-decoration: none;
+    display: inline-block;
+    width: 100px; 
+}
+
+.profile button {
+    display: block;
+    width: 100%;
+    padding: 5px 0;
+    font-family: inherit;
+    font-size: 16px;
+    font-weight: 600;
+    color: #1a73e8;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    background-color: transparent; 
+    transition: transform 0.1s ease;
+}
+
+/* аккаунт */
+
+.account {
+    margin-top: -5px; 
+    margin-left: -41px;
+}
+
+.account a {
+    text-decoration: none;
+    display: inline-block;
+    width: 100px; 
+}
+
+.account button {
+    display: block;
+    width: 100%;
+    padding: 5px 0;
+    font-family: inherit;
+    font-size: 16px;
+    font-weight: 600;
+    color: #1a73e8;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    background-color: transparent; 
+    transition: transform 0.1s ease;
+}
+
+/* выход */
+
+.logoutIT {
+    margin-top: -5px; 
+    margin-left: -45px;
+}
+
+.logoutIT a {
+    text-decoration: none;
+    display: inline-block;
+    width: 100px; 
+}
+
+.logoutIT button {
+    display: block;
+    width: 100%;
+    padding: 5px 0;
+    font-family: inherit;
+    font-size: 16px;
+    font-weight: 600;
+    color: #1a73e8;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    background-color: transparent; 
+    transition: transform 0.1s ease;
+}
+
+/* политика */
+
+.politic {
+    margin-top: -5px; 
+    margin-left: -35px;
+}
+
+.politic a {
+    text-decoration: none;
+    display: inline-block;
+    width: 100px; 
+}
+
+.politic button {
+    display: block;
+    width: 100%;
+    padding: 5px 0;
+    font-family: inherit;
+    font-size: 16px;
+    font-weight: 600;
+    color: #1a73e8;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    background-color: transparent; 
+    transition: transform 0.1s ease;
+}
+
+/* приглашения */
+
+.invite {
+    margin-top: -5px; 
+    margin-left: -22px;
+}
+
+.invite a {
+    text-decoration: none;
+    display: inline-block;
+    width: 100px; 
+}
+
+.invite button {
+    display: block;
+    width: 100%;
+    padding: 5px 0;
+    font-family: inherit;
+    font-size: 16px;
+    font-weight: 600;
+    color: #1a73e8;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    background-color: transparent; 
+    transition: transform 0.1s ease;
+}
+
+/* вопросы */
+
+.telegramN {
+    margin-top: -5px; 
+    margin-left: -55px;
+}
+
+.telegramN a {
+    text-decoration: none;
+    display: inline-block;
+    width: 100px; 
+}
+
+.telegramN button {
+    display: block;
+    width: 100%;
+    padding: 5px 0;
+    font-family: inherit;
+    font-size: 16px;
+    font-weight: 600;
+    color: #1a73e8;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    background-color: transparent; 
+    transition: transform 0.1s ease;
+}
+
+
+/* создатели */
+
+.footer {
+    position: fixed;        /* ← всегда внизу, не двигается */
+    bottom: 0;              /* ← прижать к низу */
+    left: 0;
+    width: 100%;            /* ← на всю ширину */
+    text-align: center;     /* ← текст по центру */
+    padding: 10px 0;
+    background-color: #f0f2f5;  /* ← фон как у body */
+    border-top: 1px solid #3b5998;
+    color: #000000;
+    font-size: 14px;
+    z-index: 100;           /* ← поверх всего */
+}
+
+.footer p {
+    margin: 0;
+    line-height: 1.5;
+}
+
+.footer button {
+    margin: 5px 3px;
+    padding: 5px 12px;
+    font-size: 14px;
+    font-weight: 600;
+    color: #0255c2;
+    background-color: transparent;
+    border: 1px solid #015dd6;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+.footer button:hover {
+    background-color: #0066ec;
+    color: white;
+}
+
+/* друзья */
+
+.fr1N {
+    margin-top: -5px; 
+    margin-left: -43px;
+}
+
+.fr1N a {
+    text-decoration: none;
+    display: inline-block;
+    width: 100px; 
+}
+
+.fr1N button {
+    display: block;
+    width: 100%;
+    padding: 5px 0;
+    font-family: inherit;
+    font-size: 16px;
+    font-weight: 600;
+    color: #1a73e8;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    background-color: transparent; 
+    transition: transform 0.1s ease;
+}
+
+/* Кнопка-ссылка на Telegram */
+.telegram-btn {
+    display: inline-block;
+    padding: 10px 24px;
+    background-color: #3b5998;   /* ваш фирменный синий, как у рамок */
+    color: #fff;
+    text-decoration: none;
+    border-radius: 6px;
+    font-family: inherit;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.2s ease, transform 0.1s ease;
+}
+
+.telegram-btn:hover {
+    background-color: #1a73e8;
+}
+
+.telegram-btn:active {
+    transform: scale(0.97);
+}
