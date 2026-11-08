@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+
+{% block title %}Викторины{% endblock %}
+
+{% block body_class %}home-page{% endblock %}
+
+{% block content %}
+<h1>ВИКТОРИНЫ</h1>
+<h2>Балтийский Берег</h2>
+
+<a href="/v1" class="home-link"><button type="button" class="home-btn">Викторина 1. «Балтика в РПЛ 26/27»</button></a>
+<a href="/v2" class="home-link"><button type="button" class="home-btn">Викторина 2. «Балтика в сезоне 25/26»</button></a>
+<a href="/v3" class="home-link"><button type="button" class="home-btn">Викторина 3. «Игроки «Балтики» и их номера»</button></a>
+<a href="/table" class="home-link"><button type="button" class="home-btn">Таблица лидеров</button></a>
+<a href="/" class="home-link"><button type="button" class="home-btn">На главную</button></a>
+{% endblock %}

@@ -1,0 +1,22 @@
+{% extends "base.html" %}
+
+{% block title %}Удаление{% endblock %}
+
+{% block body_class %}home-page{% endblock %}
+
+{% block content %}
+<h1>УДАЛЕНИЕ</h1>
+<h2>Подтвердите действие</h2>
+
+<form class="info-card news-form" method="POST">
+    <div class="info-title">Удалить {{ what }}?</div>
+    <p class="news-text">«{{ preview }}»</p>
+    <p class="info-meta">Действие нельзя отменить.</p>
+    <div class="item-actions">
+        <button type="submit" class="btn-small btn-danger">Да, удалить</button>
+        <a class="btn-small" href="{{ cancel }}">Отмена</a>
+    </div>
+</form>
+
+<a href="/" class="home-link"><button type="button" class="home-btn">На главную</button></a>
+{% endblock %}

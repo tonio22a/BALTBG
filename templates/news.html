@@ -1,0 +1,44 @@
+{% extends "base.html" %}
+
+{% from "_macros.html" import photo %}
+{% block title %}Новости{% endblock %}
+
+{% block body_class %}home-page{% endblock %}
+
+{% block content %}
+<h1>НОВОСТИ</h1>
+<h2>Балтийский Берег</h2>
+
+{% with messages = get_flashed_messages() %}
+{% for msg in messages %}<div class="info-card news-flash">{{ msg }}</div>{% endfor %}
+{% endwith %}
+
+{% if is_admin %}
+<form class="info-card news-form" method="POST" action="/news/add" enctype="multipart/form-data">
+    <div class="info-title">Создать новость</div>
+    <textarea name="text" rows="5" placeholder="Текст новости" maxlength="5000"></textarea>
+    <label class="file-label">Фото (необязательно)
+        <input type="file" name="image" accept="image/png,image/jpeg,image/webp,image/gif">
+    </label>
+    <button type="submit" class="news-submit">Опубликовать</button>
+</form>
+{% endif %}
+
+{% for n in news %}
+<div class="info-card" id="news-{{ n.id }}">
+    <div class="info-meta">{{ n.date }}{% if n.edited %} · изменено{% endif %}</div>
+    {% if n.image %}{{ photo(n.image, "photo-news-" ~ n.id, "#news-" ~ n.id, "news-img", "Фото к новости") }}{% endif %}
+    {% if n.text %}<p class="news-text">{{ n.text }}</p>{% endif %}
+    {% if is_admin %}
+    <div class="item-actions">
+        <a class="btn-small" href="{{ url_for('news_edit', news_id=n.id) }}">Редактировать</a>
+        <a class="btn-small btn-danger" href="{{ url_for('news_delete', news_id=n.id) }}">Удалить</a>
+    </div>
+    {% endif %}
+</div>
+{% else %}
+<div class="info-card info-empty">Новостей пока нет.</div>
+{% endfor %}
+
+<a href="/" class="home-link"><button type="button" class="home-btn">На главную</button></a>
+{% endblock %}

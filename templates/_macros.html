@@ -1,0 +1,6 @@
+{# Фото + просмотр на весь экран без JavaScript (через CSS :target).
+   id — уникальный на странице, back — якорь, куда вернуться при закрытии. #}
+{% macro photo(src, id, back, cls, alt) %}
+<a class="photo-link" href="#{{ id }}"><img class="{{ cls }}" src="{{ src }}" alt="{{ alt }}" loading="lazy"></a>
+<a class="lightbox" id="{{ id }}" href="{{ back }}"><img src="{{ src }}" alt="{{ alt }}" loading="lazy"></a>
+{% endmacro %}

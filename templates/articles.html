@@ -1,0 +1,52 @@
+{% extends "base.html" %}
+
+{% from "_macros.html" import photo %}
+{% block title %}Статьи{% endblock %}
+
+{% block body_class %}home-page{% endblock %}
+
+{% block content %}
+<h1>СТАТЬИ</h1>
+<h2>Балтийский Берег</h2>
+
+{% with messages = get_flashed_messages() %}
+{% for msg in messages %}<div class="info-card news-flash">{{ msg }}</div>{% endfor %}
+{% endwith %}
+
+{% if is_admin %}
+<form class="info-card news-form" method="POST" action="{{ url_for('article_add') }}" enctype="multipart/form-data">
+    <div class="info-title">Новая статья</div>
+    <input type="text" name="title" placeholder="Заголовок" maxlength="150" required>
+    <input type="text" name="author" placeholder="Автор (если пусто — ваше имя)" maxlength="60">
+    <textarea name="text" rows="8" placeholder="Текст статьи" maxlength="20000" required></textarea>
+    <label class="file-label">Фото (необязательно)
+        <input type="file" name="image" accept="image/png,image/jpeg,image/webp,image/gif">
+    </label>
+    <button type="submit" class="news-submit">Опубликовать</button>
+</form>
+{% endif %}
+
+{% for a in articles %}
+<div class="info-card" id="article-{{ a.id }}">
+    <div class="info-meta">{{ a.date }}{% if a.author %} · {{ a.author }}{% endif %}{% if a.edited %} · изменено{% endif %}</div>
+    <div class="info-title">{{ a.title }}</div>
+    {% if a.image %}{{ photo(a.image, "photo-article-" ~ a.id, "#article-" ~ a.id, "article-img", a.title) }}{% endif %}
+    {% set long = a.text|length > 250 or a.text.count("\n") > 4 %}
+    <input type="checkbox" id="more-{{ a.id }}" class="more-toggle" hidden>
+    <div class="article-text article-body{% if long %} clamp{% endif %}">{{ a.text }}</div>
+    {% if long %}
+    <label for="more-{{ a.id }}" class="article-more"><span class="t-more">Читать полностью</span><span class="t-less">Свернуть</span></label>
+    {% endif %}
+    {% if is_admin %}
+    <div class="item-actions">
+        <a class="btn-small" href="{{ url_for('article_edit', article_id=a.id) }}">Редактировать</a>
+        <a class="btn-small btn-danger" href="{{ url_for('article_delete', article_id=a.id) }}">Удалить</a>
+    </div>
+    {% endif %}
+</div>
+{% else %}
+<div class="info-card info-empty">Статей пока нет.</div>
+{% endfor %}
+
+<a href="/" class="home-link"><button type="button" class="home-btn">На главную</button></a>
+{% endblock %}

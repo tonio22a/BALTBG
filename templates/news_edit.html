@@ -1,0 +1,33 @@
+{% extends "base.html" %}
+
+{% from "_macros.html" import photo %}
+{% block title %}Редактирование новости{% endblock %}
+
+{% block body_class %}home-page{% endblock %}
+
+{% block content %}
+<h1>РЕДАКТИРОВАНИЕ</h1>
+<h2>Новость</h2>
+
+{% for msg in get_flashed_messages() %}<div class="info-card news-flash">{{ msg }}</div>{% endfor %}
+
+<form class="info-card news-form" method="POST" enctype="multipart/form-data">
+    <textarea name="text" rows="8" placeholder="Текст новости" maxlength="5000">{{ item.text }}</textarea>
+
+    {% if item.image %}
+    {{ photo(item.image, "photo-current", "#", "news-img", "Текущее фото") }}
+    <label class="check-label"><input type="checkbox" name="remove_image" value="1"> Удалить текущее фото</label>
+    {% endif %}
+
+    <label class="file-label">{{ 'Заменить фото' if item.image else 'Добавить фото' }}
+        <input type="file" name="image" accept="image/png,image/jpeg,image/webp,image/gif">
+    </label>
+
+    <div class="item-actions">
+        <button type="submit" class="news-submit">Сохранить</button>
+        <a class="btn-small" href="{{ url_for('news') }}#news-{{ item.id }}">Отмена</a>
+    </div>
+</form>
+
+<a href="/" class="home-link"><button type="button" class="home-btn">На главную</button></a>
+{% endblock %}

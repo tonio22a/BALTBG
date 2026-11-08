@@ -1,4 +1,13 @@
-/* 1. ГЛОБАЛЬНЫЙ СБРОС ОТСТУПОВ CHROME */
+/* =========================================================
+   🎨 ФК БАЛТИКА КАЛИНИНГРАД — ФИРМЕННАЯ ПАЛИТРА
+   Основной синий:  #0033A0
+   Акцент красный:  #E30613
+   Светлый фон:     #EAF0F9
+   ========================================================= */
+
+/* =========================================================
+   1. ГЛОБАЛЬНЫЙ СБРОС ОТСТУПОВ CHROME
+   ========================================================= */
 *, *::before, *::after {
     box-sizing: border-box;
     margin: 0;
@@ -6,34 +15,40 @@
 }
 
 body {
-    background-color: #f0f2f5;
-    font-family: Arial, sans-serif;
+    background-color: #EAF0F9;
+    background-image:
+        linear-gradient(135deg, #EAF0F9 0%, #D6E3F5 100%);
+    font-family: "Segoe UI", Arial, sans-serif;
     display: flex;
-    flex-direction: column; 
-    align-items: center;    
-    min-height: 100vh;      
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
     padding: 20px;
+    color: #0B1A33;
 }
 
-/* 2. ШАПКА (ДЛЯ ГЛАВНОЙ СТРАНИЦЫ) */
+/* =========================================================
+   2. ШАПКА (ДЛЯ ГЛАВНОЙ СТРАНИЦЫ)
+   ========================================================= */
 .header-container {
     display: flex;
-    align-items: center;    
-    width: 100%;            
-    max-width: 1200px;      
-    margin-bottom: 40px;    
+    align-items: center;
+    width: 100%;
+    max-width: 1200px;
+    margin-bottom: 40px;
+    border-bottom: 3px solid #0033A0;
+    padding-bottom: 10px;
 }
 
 .logo {
-    padding: 10px 0; 
+    padding: 10px 0;
 }
-
 
 .headerwelcome-container {
     display: flex;
-    justify-content: center; /* центрирование по горизонтали */
-    align-items: flex-start; /* прижатие к верху */
-    padding-top: 20px;       /* отступ от верха экрана */
+    justify-content: center;
+    align-items: flex-start;
+    padding-top: 20px;
     width: 100%;
 }
 .logoWEL {
@@ -44,19 +59,21 @@ body {
 .brand-block {
     display: flex;
     flex-direction: column;
-    align-items: flex-start; 
+    align-items: flex-start;
 }
 
-/* 3. СТИЛИ ДЛЯ ПЕРВОЙ КНОПКИ (В ШАПКЕ) */
+/* =========================================================
+   3. СТИЛИ ДЛЯ ПЕРВОЙ КНОПКИ (В ШАПКЕ)
+   ========================================================= */
 .crea {
-    margin-top: -27px; 
+    margin-top: -27px;
     margin-left: 32px;
 }
 
 .crea a {
     text-decoration: none;
     display: inline-block;
-    width: 100px; 
+    width: 100px;
 }
 
 .crea button {
@@ -66,24 +83,24 @@ body {
     font-family: inherit;
     font-size: 16px;
     font-weight: 600;
-    color: #1a73e8;
+    color: #0033A0;
     border: none;
     border-radius: 6px;
     cursor: pointer;
-    background-color: transparent; 
-    transition: transform 0.1s ease;
+    background-color: transparent;
+    transition: color 0.2s ease, transform 0.1s ease;
 }
+.crea button:hover { color: #E30613; }
 
-/* 3. СТИЛИ ДЛЯ ПЕРВОЙ КНОПКИ (В ШАПКЕ) */
 .fr1 {
-    margin-top: -20px; 
+    margin-top: -20px;
     margin-left: -20px;
 }
 
 .fr1 a {
     text-decoration: none;
     display: inline-block;
-    width: 100px; 
+    width: 100px;
 }
 
 .fr1 button {
@@ -93,24 +110,24 @@ body {
     font-family: inherit;
     font-size: 16px;
     font-weight: 600;
-    color: #1a73e8;
+    color: #0033A0;
     border: none;
     border-radius: 6px;
     cursor: pointer;
-    background-color: transparent; 
-    transition: transform 0.1s ease;
+    background-color: transparent;
+    transition: color 0.2s ease, transform 0.1s ease;
 }
+.fr1 button:hover { color: #E30613; }
 
-/* 3. СТИЛИ ДЛЯ ПЕРВОЙ КНОПКИ (В ШАПКЕ) */
 .wel {
-    margin-top: -27.5px; 
+    margin-top: -27.5px;
     margin-left: 93px;
 }
 
 .wel a {
     text-decoration: none;
     display: inline-block;
-    width: 100px; 
+    width: 100px;
 }
 
 .wel button {
@@ -120,23 +137,24 @@ body {
     font-family: inherit;
     font-size: 16px;
     font-weight: 600;
-    color: #1a73e8;
+    color: #0033A0;
     border: none;
     border-radius: 6px;
     cursor: pointer;
-    background-color: transparent; 
-    transition: transform 0.1s ease;
+    background-color: transparent;
+    transition: color 0.2s ease, transform 0.1s ease;
 }
+.wel button:hover { color: #E30613; }
 
 .logout {
-    margin-top: -27.5px; 
+    margin-top: -27.5px;
     margin-left: 163px;
 }
 
 .logout a {
     text-decoration: none;
     display: inline-block;
-    width: 100px; 
+    width: 100px;
 }
 
 .logout button {
@@ -146,60 +164,70 @@ body {
     font-family: inherit;
     font-size: 16px;
     font-weight: 600;
-    color: #1a73e8;
+    color: #E30613;
     border: none;
     border-radius: 6px;
     cursor: pointer;
-    background-color: transparent; 
-    transition: transform 0.1s ease;
+    background-color: transparent;
+    transition: color 0.2s ease, transform 0.1s ease;
 }
+.logout button:hover { color: #0033A0; }
 
-/* 4. СТИЛИ ДЛЯ ВТОРОЙ КНОПКИ (В КАРТОЧКЕ «СОЗДАТЕЛИ») */
+/* =========================================================
+   4. СТИЛИ ДЛЯ ВТОРОЙ КНОПКИ (В КАРТОЧКЕ «СОЗДАТЕЛИ»)
+   ========================================================= */
 .home1 {
-    margin-top: 20px; /* Отступ сверху от текста до кнопки */
+    margin-top: 20px;
     display: flex;
     justify-content: center;
     width: 100%;
 }
 
 .home1 a {
-    text-decoration: none !important; /* Жестко запрещаем подчеркивание */
-    display: inline-flex;     
-    justify-content: center;  
+    text-decoration: none !important;
+    display: inline-flex;
+    justify-content: center;
     align-items: center;
-    width: 140px;             
+    width: 140px;
 }
 
 .home1 button {
-    display: flex;            
-    align-items: center;      
-    justify-content: center;  
+    display: flex;
+    align-items: center;
+    justify-content: center;
     width: 100%;
-    padding: 8px 0;           
-    
+    padding: 8px 0;
+
     font-family: inherit;
     font-size: 16px;
     font-weight: 600;
-    color: #1a73e8;
+    color: #0033A0;
     border-radius: 6px;
     cursor: pointer;
-    background-color: transparent; 
-    border: 2px solid #1a73e8;    
-    text-decoration: none !important; /* Убираем любые скрытые линии текста */
-    outline: none; /* Убираем черную рамку Chrome при клике */
-    transition: background-color 0.2s ease, transform 0.1s ease;
+    background-color: transparent;
+    border: 2px solid #0033A0;
+    text-decoration: none !important;
+    outline: none;
+    transition: background-color 0.2s ease, color 0.2s ease, transform 0.1s ease;
+}
+.home1 button:hover {
+    background-color: #0033A0;
+    color: #FFFFFF;
 }
 
-/* 5. КАРТОЧКА СТРАНИЦЫ СОЗДАТЕЛЕЙ */
+/* =========================================================
+   5. КАРТОЧКИ СТРАНИЦ
+   ========================================================= */
 .cardcr {
-    background: white;
+    background: #FFFFFF;
     padding: 40px;
     border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    box-shadow: 0 4px 12px rgba(0, 51, 160, 0.12);
     text-align: center;
-    max-width: 500px;       
+    max-width: 500px;
     width: 100%;
-    
+    border-top: 4px solid #0033A0;
+
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -207,14 +235,15 @@ body {
 }
 
 .cardwel {
-    background: white;
+    background: #FFFFFF;
     padding: 32px 25px;
     border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    box-shadow: 0 4px 12px rgba(0, 51, 160, 0.12);
     text-align: left;
-    max-width: 600px;       
+    max-width: 600px;
     width: 100%;
-    
+    border-top: 4px solid #0033A0;
+
     display: flex;
     flex-direction: column;
     align-items: left;
@@ -222,185 +251,140 @@ body {
 }
 
 .cardfr {
-    background: white;
-    /* Изменили padding: 40px сверху, 60px по бокам, 60px снизу */
-    padding: 40px 60px 60px 60px; 
+    background: #FFFFFF;
+    padding: 40px 60px 60px 60px;
     border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    box-shadow: 0 4px 12px rgba(0, 51, 160, 0.12);
     text-align: center;
-    max-width: 500px;       
+    max-width: 500px;
     width: 100%;
-    
-    /* Задаем минимальную высоту, чтобы карточке было куда растягиваться */
-    min-height: 400px; 
-    
+    min-height: 400px;
+    border-top: 4px solid #0033A0;
+
     display: flex;
     flex-direction: column;
     align-items: center;
-    /* justify-content: center;  <-- Эту строку полностью удаляем или комментируем */
 }
 
-
-
-.card p {
-    margin: 10px 0; /* Чтобы текст внутри карточки не слипался */
-}
-
-/* Находим САМУЮ ПЕРВУЮ кнопку в карточке и толкаем её вниз */
-.cardfr .home1:first-of-type {
-    margin-top: auto; 
-}
-
-
+/* =========================================================
+   6. ЗАГОЛОВКИ
+   ========================================================= */
 h1 {
-    color: #1a73e8;
+    color: #0033A0;
+    text-shadow: 0 1px 0 rgba(0,0,0,0.05);
 }
 
 h2 {
-    color: #1a73e8;
-}
-
-.cardwel {
-    padding-top: 30px;          
-    padding-left: 25px;    /* отступы всей карточки от краёв */
-    /* ... остальные стили карточки ... */
-}
-
-/* Текст слева, но с отступом от края карточки */
-.left {
-    text-align: left;
-    padding-left: 1px;       /* ← отступ от левого края карточки */
-    margin: 0;
-}
-
-/* Текст по центру карточки */
-.center {
     text-align: center;
-    margin: 0;
+    color: #0033A0;
 }
 
-/* Пустая строка-разделитель */
-.spacer {
-    margin: 0;
-    line-height: 1;
-}
-
-.date p {
-    margin-top: -70px;
-    margin-left: 1260px;
-    cursor: default; /* обычный курсор, не «рука» */
-    color: #1a73e8;  /* цвет как у обычного текста */
+/* =========================================================
+   7. КНОПКИ (ОБЩИЕ)
+   ========================================================= */
+.home-btn {
+    margin: 5px 3px;
+    width: 99%;
+    margin-top: 50px;
+    padding: 5px 12px;
+    font-size: 18px;
+    font-weight: 600;
+    color: #0033A0;
+    background-color: transparent;
+    border: 1px solid #0033A0;
+    border-radius: 6px;
+    cursor: pointer;
     text-decoration: none;
+    transition: background-color 0.2s ease, color 0.2s ease;
 }
 
-/* Рамка Welcome */
-
-.box {
-    border: 1px solid #3b5998;
-    margin-bottom: 15px;
+.tg-channel-btn {
+    display: inline-block;
+    width: auto;
+    align-self: flex-start;
+    margin-top: 20px;
+    margin-right: 40px;
 }
 
-.box-header {
-    background-color: #3b5998;
-    color: white;
-    padding: 5px 10px;
-    font-weight: bold;
+.home-btn:hover {
+    background-color: #0033A0;
+    color: #FFFFFF;
 }
 
-.box-content {
-    padding: 10px;
-    background-color: white;
-}
-
-/* Рамка Home */
-
-.boxH {
-    border: 1px solid #3b5998;
-    margin-bottom: 15px;
-    margin-left: 0;
-    width: 80%;
-    transform: translateX(400px);
-    
-}
-
-.box-headerH {
-    background-color: #3b5998;
-    color: white;
-    padding: 5px 10px;
-    font-weight: bold;
-}
-
-.box-contentH {
-    padding: 60px;
-    background-color: white;
-}
-
-
-/* Рамка FAQ */
-
+/* =========================================================
+   8. РАМКА FAQ (Telegram)
+   ========================================================= */
 .telegram {
-    border: 1px solid #3b5998;
+    border: 1px solid #0033A0;
     margin-bottom: 30px;
-    margin-left: 280px;        /* ← сдвиг вправо */
-    max-width: 1200px;          /* ← шире, больше места */
-    width: calc(100% - 200px); /* ← учитываем отступ */
-    background-color: white;
+    margin-left: 280px;
+    max-width: 1200px;
+    width: calc(100% - 200px);
+    background-color: #FFFFFF;
+    border-radius: 8px;
+    overflow: hidden;
 }
 
 .telegram-header {
-    background-color: #3b5998;
-    color: white;
+    background-color: #0033A0;
+    color: #FFFFFF;
     padding: 5px 10px;
     font-weight: bold;
 }
 
 .telegram-content {
-    padding-top: 20px;      /* сверху — 20px */
-    padding-right: 30px;    /* справа — 30px */
-    padding-bottom: 35px;  /* СНИЗУ — 200px (много места вниз) */
-    padding-left: 30px;     /* слева — 30px */
+    padding-top: 20px;
+    padding-right: 30px;
+    padding-bottom: 35px;
+    padding-left: 30px;
     text-align: left;
-    background-color: white;
+    background-color: #FFFFFF;
 }
 
-/* Рамка ITEMS */
+/* =========================================================
+   9. РАМКА ITEMS (БОКОВОЕ МЕНЮ)
+   ========================================================= */
 .items {
-    position: fixed;        /* ← всегда на одном месте */
-    top: 23px;             /* ← отступ сверху */
-    left: 20px;             /* ← отступ слева */
+    position: fixed;
+    top: 23px;
+    left: 20px;
     width: 150px;
-    border: 1px solid #3b5998;
-    background-color: white;
+    border: 1px solid #0033A0;
+    background-color: #FFFFFF;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 10px rgba(0, 51, 160, 0.15);
 }
 
 .items-header {
-    background-color: #3b5998;
-    color: white;
+    background-color: #0033A0;
+    color: #FFFFFF;
     padding: 5px 10px;
     font-weight: bold;
 }
 
 .items-content {
-    padding-top: 20px;      /* сверху — 20px */
-    padding-right: 52px;    /* справа — 30px */
-    padding-bottom: 5px;  /* СНИЗУ — 200px (много места вниз) */
-    padding-left: 30px;     /* слева — 30px */
+    padding-top: 20px;
+    padding-right: 52px;
+    padding-bottom: 5px;
+    padding-left: 30px;
     text-align: left;
-    background-color: white;
+    background-color: #FFFFFF;
 }
 
-/* Текст стиль для ИТЕМЫ */
+/* =========================================================
+   10. ПУНКТЫ МЕНЮ ITEMS
+   ========================================================= */
 
-/* профиль */
 .profile {
-    margin-top: -20px; 
+    margin-top: -20px;
     margin-left: -35px;
 }
 
 .profile a {
     text-decoration: none;
     display: inline-block;
-    width: 100px; 
+    width: 100px;
 }
 
 .profile button {
@@ -410,25 +394,24 @@ h2 {
     font-family: inherit;
     font-size: 16px;
     font-weight: 600;
-    color: #1a73e8;
+    color: #0033A0;
     border: none;
     border-radius: 6px;
     cursor: pointer;
-    background-color: transparent; 
-    transition: transform 0.1s ease;
+    background-color: transparent;
+    transition: color 0.2s ease;
 }
-
-/* аккаунт */
+.profile button:hover { color: #E30613; }
 
 .account {
-    margin-top: -5px; 
+    margin-top: -5px;
     margin-left: -41px;
 }
 
 .account a {
     text-decoration: none;
     display: inline-block;
-    width: 100px; 
+    width: 100px;
 }
 
 .account button {
@@ -438,25 +421,24 @@ h2 {
     font-family: inherit;
     font-size: 16px;
     font-weight: 600;
-    color: #1a73e8;
+    color: #0033A0;
     border: none;
     border-radius: 6px;
     cursor: pointer;
-    background-color: transparent; 
-    transition: transform 0.1s ease;
+    background-color: transparent;
+    transition: color 0.2s ease;
 }
-
-/* выход */
+.account button:hover { color: #E30613; }
 
 .logoutIT {
-    margin-top: -5px; 
+    margin-top: -5px;
     margin-left: -45px;
 }
 
 .logoutIT a {
     text-decoration: none;
     display: inline-block;
-    width: 100px; 
+    width: 100px;
 }
 
 .logoutIT button {
@@ -466,25 +448,24 @@ h2 {
     font-family: inherit;
     font-size: 16px;
     font-weight: 600;
-    color: #1a73e8;
+    color: #E30613;
     border: none;
     border-radius: 6px;
     cursor: pointer;
-    background-color: transparent; 
-    transition: transform 0.1s ease;
+    background-color: transparent;
+    transition: color 0.2s ease;
 }
-
-/* политика */
+.logoutIT button:hover { color: #0033A0; }
 
 .politic {
-    margin-top: -5px; 
+    margin-top: -5px;
     margin-left: -35px;
 }
 
 .politic a {
     text-decoration: none;
     display: inline-block;
-    width: 100px; 
+    width: 100px;
 }
 
 .politic button {
@@ -494,25 +475,24 @@ h2 {
     font-family: inherit;
     font-size: 16px;
     font-weight: 600;
-    color: #1a73e8;
+    color: #0033A0;
     border: none;
     border-radius: 6px;
     cursor: pointer;
-    background-color: transparent; 
-    transition: transform 0.1s ease;
+    background-color: transparent;
+    transition: color 0.2s ease;
 }
-
-/* приглашения */
+.politic button:hover { color: #E30613; }
 
 .invite {
-    margin-top: -5px; 
+    margin-top: -5px;
     margin-left: -22px;
 }
 
 .invite a {
     text-decoration: none;
     display: inline-block;
-    width: 100px; 
+    width: 100px;
 }
 
 .invite button {
@@ -522,25 +502,24 @@ h2 {
     font-family: inherit;
     font-size: 16px;
     font-weight: 600;
-    color: #1a73e8;
+    color: #0033A0;
     border: none;
     border-radius: 6px;
     cursor: pointer;
-    background-color: transparent; 
-    transition: transform 0.1s ease;
+    background-color: transparent;
+    transition: color 0.2s ease;
 }
-
-/* вопросы */
+.invite button:hover { color: #E30613; }
 
 .telegramN {
-    margin-top: -5px; 
+    margin-top: -5px;
     margin-left: -55px;
 }
 
 .telegramN a {
     text-decoration: none;
     display: inline-block;
-    width: 100px; 
+    width: 100px;
 }
 
 .telegramN button {
@@ -550,29 +529,51 @@ h2 {
     font-family: inherit;
     font-size: 16px;
     font-weight: 600;
-    color: #1a73e8;
+    color: #0033A0;
     border: none;
     border-radius: 6px;
     cursor: pointer;
-    background-color: transparent; 
-    transition: transform 0.1s ease;
+    background-color: transparent;
+    transition: color 0.2s ease;
+}
+.telegramN button:hover { color: #E30613; }
+
+/* =========================================================
+   11. ФУТЕР  ← ИСПРАВЛЕНО: весь текст и ссылки теперь белые
+   ========================================================= */
+.footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    text-align: center;
+    padding: 15px 0;
+    background-color: #0033A0;
+    background-image:
+        linear-gradient(rgba(0, 25, 80, 0.25), rgba(0, 25, 80, 0.25)),
+        url("back.jpg");
+    background-size: cover;
+    background-position: center;
+    border-top: 3px solid #E30613;
+    color: #FFFFFF;
+    font-size: 14px;
+    z-index: 100;
 }
 
+/* 🔵 Всё внутри футера — белым */
+.footer,
+.footer h2,        /* ← добавьте эту строку */
+.footer p,
+.footer a,
+.footer span,
+.footer div {
+    color: #FFFFFF !important;
+}
 
-/* создатели */
-
-.footer {
-    position: fixed;        /* ← всегда внизу, не двигается */
-    bottom: 0;              /* ← прижать к низу */
-    left: 0;
-    width: 100%;            /* ← на всю ширину */
-    text-align: center;     /* ← текст по центру */
-    padding: 10px 0;
-    background-color: #f0f2f5;  /* ← фон как у body */
-    border-top: 1px solid #3b5998;
-    color: #000000;
-    font-size: 14px;
-    z-index: 100;           /* ← поверх всего */
+/* 🔴 Ссылки в футере при наведении — красным (акцент Балтики) */
+.footer a:hover {
+    color: #E30613 !important;
+    text-decoration: underline;
 }
 
 .footer p {
@@ -580,34 +581,46 @@ h2 {
     line-height: 1.5;
 }
 
+/* Заголовок в футере */
+.footer .bgfo {
+    color: #FFFFFF;          /* белый, чтобы был виден на синем */
+    font-size: 18px;         /* можно поправить размер */
+    text-align: center;
+    margin: 8px 0;
+    text-shadow: none;       /* на всякий случай, если где-то наследуется */
+}
+
 .footer button {
     margin: 5px 3px;
     padding: 5px 12px;
     font-size: 14px;
     font-weight: 600;
-    color: #0255c2;
+    color: #FFFFFF !important;
     background-color: transparent;
-    border: 1px solid #015dd6;
+    border: 1px solid #FFFFFF;
     border-radius: 6px;
     cursor: pointer;
+    transition: background-color 0.2s ease, color 0.2s ease;
 }
 
 .footer button:hover {
-    background-color: #0066ec;
-    color: white;
+    background-color: #E30613;
+    border-color: #E30613;
+    color: #FFFFFF !important;
 }
 
-/* друзья */
-
+/* =========================================================
+   12. ДРУЗЬЯ (fr1N)
+   ========================================================= */
 .fr1N {
-    margin-top: -5px; 
+    margin-top: -5px;
     margin-left: -43px;
 }
 
 .fr1N a {
     text-decoration: none;
     display: inline-block;
-    width: 100px; 
+    width: 100px;
 }
 
 .fr1N button {
@@ -617,20 +630,23 @@ h2 {
     font-family: inherit;
     font-size: 16px;
     font-weight: 600;
-    color: #1a73e8;
+    color: #0033A0;
     border: none;
     border-radius: 6px;
     cursor: pointer;
-    background-color: transparent; 
-    transition: transform 0.1s ease;
+    background-color: transparent;
+    transition: color 0.2s ease;
 }
+.fr1N button:hover { color: #E30613; }
 
-/* Кнопка-ссылка на Telegram */
+/* =========================================================
+   13. КНОПКА-ССЫЛКА НА TELEGRAM
+   ========================================================= */
 .telegram-btn {
     display: inline-block;
     padding: 10px 24px;
-    background-color: #3b5998;   /* ваш фирменный синий, как у рамок */
-    color: #fff;
+    background-color: #0033A0;
+    color: #FFFFFF;
     text-decoration: none;
     border-radius: 6px;
     font-family: inherit;
@@ -638,12 +654,684 @@ h2 {
     font-weight: 600;
     cursor: pointer;
     transition: background-color 0.2s ease, transform 0.1s ease;
+    border: 2px solid #0033A0;
 }
 
 .telegram-btn:hover {
-    background-color: #1a73e8;
+    background-color: #E30613;
+    border-color: #E30613;
 }
 
 .telegram-btn:active {
     transform: scale(0.97);
+}
+
+/* =========================================================
+   14. СТИЛИ ДЛЯ СТРАНИЦЫ ВИКТОРИНЫ (v1.html)
+   ========================================================= */
+
+.quiz-page h1 {
+    color: #0033A0;
+    text-align: center;
+    margin-bottom: 30px;
+    font-size: 28px;
+}
+
+.quiz-page form {
+    background: #FFFFFF;
+    padding: 40px 50px 50px;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 51, 160, 0.12);
+    width: 100%;
+    max-width: 700px;
+    display: flex;
+    flex-direction: column;
+    border-top: 4px solid #0033A0;
+}
+
+.quiz-page form > div {
+    margin-bottom: 25px;
+}
+
+.quiz-page form > div p {
+    margin-bottom: 15px;
+    font-size: 17px;
+    line-height: 1.4;
+}
+
+.quiz-page form > div p b {
+    color: #0033A0;
+    font-weight: 700;
+}
+
+.quiz-page form label {
+    display: flex;
+    align-items: center;
+    padding: 10px 15px;
+    margin-bottom: 8px;
+    border: 1px solid #B8C6DC;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 15px;
+    background-color: #F4F8FD;
+    transition: border-color 0.2s ease, background-color 0.2s ease;
+    user-select: none;
+}
+
+.quiz-page form label:hover {
+    border-color: #0033A0;
+    background-color: #E6EEFA;
+}
+
+.quiz-page form input[type="radio"] {
+    margin-right: 12px;
+    accent-color: #0033A0;
+    cursor: pointer;
+    transform: scale(1.15);
+}
+
+.quiz-page form label:has(input[type="radio"]:checked) {
+    border-color: #0033A0;
+    background-color: #D6E3F5;
+    font-weight: 600;
+    color: #001F5C;
+}
+
+.quiz-page form hr {
+    border: none;
+    border-top: 1px solid #D6E3F5;
+    margin: 20px 0 25px;
+}
+
+.quiz-page form button[type="submit"] {
+    align-self: center;
+    margin-top: 20px;
+    padding: 12px 36px;
+    font-family: inherit;
+    font-size: 16px;
+    font-weight: 600;
+    color: #FFFFFF;
+    background-color: #0033A0;
+    border: 2px solid #0033A0;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.2s ease, transform 0.1s ease,
+                box-shadow 0.2s ease;
+}
+
+.quiz-page form button[type="submit"]:hover {
+    background-color: #E30613;
+    border-color: #E30613;
+    box-shadow: 0 4px 10px rgba(227, 6, 19, 0.35);
+}
+
+.quiz-page form button[type="submit"]:active {
+    transform: scale(0.97);
+}
+
+.quiz-page form button[type="submit"]:focus {
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(0, 51, 160, 0.35);
+}
+
+@media (max-width: 600px) {
+    .quiz-page h1 {
+        font-size: 22px;
+    }
+    .quiz-page form {
+        padding: 25px 20px 35px;
+    }
+    .quiz-page form label {
+        font-size: 14px;
+        padding: 9px 12px;
+    }
+}
+
+/* =========================================================
+   15. СТИЛИ ДЛЯ СТРАНИЦЫ РЕЗУЛЬТАТОВ ВИКТОРИНЫ
+   ========================================================= */
+
+.result-card {
+    background: #FFFFFF;
+    padding: 50px 40px;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 51, 160, 0.12);
+    text-align: center;
+    width: 100%;
+    max-width: 600px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-top: 4px solid #0033A0;
+}
+
+.result-card h1 {
+    margin-bottom: 20px;
+    font-size: 28px;
+    color: #0033A0;
+}
+
+.result-card h2 {
+    margin-bottom: 40px;
+    font-size: 22px;
+    font-weight: normal;
+    color: #333;
+}
+
+.result-card h2 span {
+    color: #E30613;
+    font-size: 36px;
+    font-weight: 700;
+    padding: 0 5px;
+}
+
+.result-card .home-btn {
+    display: inline-block;
+    width: auto;
+    margin-top: 0;
+    padding: 12px 30px;
+    text-decoration: none;
+    font-size: 16px;
+    border-radius: 6px;
+    transition: background-color 0.2s ease, transform 0.1s ease, color 0.2s ease;
+}
+
+.result-card .home-btn:hover {
+    background-color: #0033A0;
+    color: #FFFFFF;
+    border-color: #0033A0;
+}
+
+.result-card .home-btn:active {
+    transform: scale(0.97);
+}
+
+.leaderboard {
+    width: 100%;
+    max-width: 600px;
+    margin: 20px auto;
+    border-collapse: collapse;
+    background: rgba(255, 255, 255, 0.95);
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 10px rgba(0, 51, 160, 0.1);
+}
+
+.leaderboard th,
+.leaderboard td {
+    padding: 10px 14px;
+    text-align: left;
+    border-bottom: 1px solid #D6E3F5;
+}
+
+.leaderboard th {
+    background: #0033A0;
+    color: #FFFFFF;
+    font-weight: 600;
+}
+
+.leaderboard tr:nth-child(even) {
+    background: #F4F8FD;
+}
+
+.leaderboard tr:first-child td {
+    font-weight: bold;
+    color: #E30613;
+}
+
+/* =========================================================
+   16. ГЛАВНАЯ СТРАНИЦА (body.home-page) — фон back.jpg
+   ========================================================= */
+body.home-page {
+    background-color: #0033A0;
+    background-image: url("back.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+/* Заголовки на тёмно-синем фоне — белые */
+body.home-page h1,
+body.home-page h2 {
+    color: #FFFFFF;
+    text-shadow: 0 2px 6px rgba(0, 0, 0, 0.35);
+}
+
+/* Кнопки викторин — светлые, читаются на синем */
+body.home-page .home-btn {
+    color: #FFFFFF;
+    background-color: rgba(255, 255, 255, 0.08);
+    border: 1px solid #FFFFFF;
+}
+
+body.home-page .home-btn:hover {
+    background-color: #FFFFFF;
+    color: #0033A0;
+}
+
+/* Отступ снизу, чтобы фиксированный футер не перекрывал контент */
+body.home-page {
+    padding-bottom: 200px;
+}
+
+/* =========================================================
+   17. КАРТОЧКИ РАЗДЕЛОВ (календарь, новости, статьи)
+   ========================================================= */
+body.home-page .info-card {
+    width: 100%;
+    max-width: 700px;
+    margin-top: 20px;
+    padding: 20px 24px;
+    background: rgba(255, 255, 255, 0.95);
+    color: #0B1A33;
+    border-radius: 10px;
+    border-top: 4px solid #0033A0;
+    box-shadow: 0 4px 12px rgba(0, 20, 80, 0.25);
+}
+
+.info-meta {
+    font-size: 14px;
+    color: #5A6B87;
+    margin-bottom: 6px;
+}
+
+.info-title {
+    font-size: 18px;
+    font-weight: 700;
+    color: #0033A0;
+}
+
+.info-score {
+    margin-top: 6px;
+    font-size: 22px;
+    font-weight: 700;
+    color: #E30613;
+}
+
+.info-card p {
+    margin-top: 8px;
+    line-height: 1.5;
+}
+
+.info-link {
+    display: inline-block;
+    margin-top: 10px;
+    font-weight: 600;
+    color: #0033A0;
+}
+
+.info-link:hover { color: #E30613; }
+
+.info-empty {
+    text-align: center;
+    color: #5A6B87;
+}
+
+/* =========================================================
+   18-19. КАЛЕНДАРЬ МАТЧЕЙ — компактные карточки, листание по месяцам
+   ========================================================= */
+.cal-pager {
+    width: 100%;
+    max-width: 760px;
+    margin-top: 18px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+}
+.cal-head { text-align: center; color: #FFFFFF; }
+.cal-title { font-size: 22px; font-weight: 700; text-shadow: 0 2px 6px rgba(0, 0, 0, 0.35); }
+.cal-count { font-size: 13px; opacity: 0.8; }
+
+.cal-nav {
+    flex: 0 0 auto;
+    width: 42px;
+    height: 42px;
+    padding: 0;
+    border-radius: 50%;
+    border: 1px solid #FFFFFF;
+    background: rgba(255, 255, 255, 0.08);
+    color: #FFFFFF;
+    font-size: 26px;
+    line-height: 1;
+    cursor: pointer;
+}
+.cal-nav:hover:not(:disabled) { background: #FFFFFF; color: #0033A0; }
+.cal-nav:disabled { opacity: 0.3; cursor: default; }
+
+/* горизонтальная лента: месяц = одна «страница», листается свайпом */
+.cal-viewport {
+    width: 100%;
+    max-width: 760px;
+    margin-top: 12px;
+    display: flex;
+    overflow-x: auto;
+    overflow-y: hidden;
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+}
+.cal-viewport::-webkit-scrollbar { display: none; }
+
+.cal-slide {
+    flex: 0 0 100%;
+    min-width: 0;            /* не даём слайду раздуваться шире экрана */
+    max-width: 100%;
+    padding: 4px 3px 10px;   /* запас под рамку «ближайшего матча» */
+    scroll-snap-align: start;
+    scroll-snap-stop: always;
+}
+
+/* сетка: слева направо, затем следующая строка — сверху вниз */
+.match-grid {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    grid-auto-flow: row;
+    gap: 8px;
+    align-content: start;
+}
+@media (min-width: 560px) {
+    .match-grid { grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 10px; }
+}
+
+.match-card {
+    min-width: 0;
+    padding: 8px 4px 7px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    text-align: center;
+    gap: 2px;
+    background: rgba(255, 255, 255, 0.95);
+    color: #0B1A33;
+    border-radius: 10px;
+    border-top: 3px solid #0033A0;
+    box-shadow: 0 3px 8px rgba(0, 20, 80, 0.25);
+    overflow: hidden;
+}
+
+.match-past { opacity: 0.85; }
+.match-next { outline: 3px solid #FFD400; outline-offset: 1px; }
+
+.match-logo {
+    width: 40px;
+    height: 40px;
+    object-fit: contain;
+    margin-bottom: 2px;
+}
+.match-logo-ph {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    color: #FFFFFF;
+    font-weight: 700;
+    font-size: 12px;
+    letter-spacing: 0.3px;
+}
+
+.match-name {
+    font-size: 12px;
+    font-weight: 700;
+    line-height: 1.15;
+    color: #0033A0;
+    min-height: 2.3em;       /* одинаковая высота и для 1, и для 2 строк */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow-wrap: anywhere;
+}
+.match-date { font-size: 11px; font-weight: 600; line-height: 1.2; }
+.match-time { font-size: 11px; color: #5A6B87; }
+
+.match-score { font-size: 15px; font-weight: 800; line-height: 1.2; }
+.match-score small { font-size: 9px; font-weight: 600; }
+.match-score.score-win  { color: #1B8A3A; }
+.match-score.score-draw { color: #8A6D00; }
+.match-score.score-loss { color: #E30613; }
+
+.match-venue {
+    margin-top: 2px;
+    padding: 1px 9px;
+    border-radius: 20px;
+    font-size: 10px;
+    font-weight: 700;
+    color: #FFFFFF;
+}
+.match-venue.is-home { background: #0033A0; }
+.match-venue.is-away { background: #E30613; }
+
+.match-tournament {
+    font-size: 9.5px;
+    line-height: 1.2;
+    color: #5A6B87;
+}
+
+.cal-note {
+    margin-top: 6px;
+    max-width: 760px;
+    text-align: center;
+    font-size: 12px;
+    line-height: 1.5;
+    color: #FFFFFF;
+    opacity: 0.8;
+}
+
+/* =========================================================
+   20. НОВОСТИ — форма админа, фото, текст
+   ========================================================= */
+.news-form { display: flex; flex-direction: column; gap: 10px; }
+.news-form textarea {
+    width: 100%;
+    padding: 10px;
+    font: inherit;
+    border: 1px solid #B8C6E0;
+    border-radius: 8px;
+    resize: vertical;
+}
+.news-form input[type="file"] { font-size: 14px; }
+.news-submit {
+    align-self: flex-start;
+    padding: 8px 18px;
+    font-weight: 600;
+    color: #FFFFFF;
+    background: #0033A0;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+}
+.news-submit:hover { background: #E30613; }
+.news-flash { color: #E30613; font-weight: 600; }
+.news-text { white-space: pre-line; }
+
+/* =========================================================
+   21. НОВОСТИ И СТАТЬИ — фото целиком, просмотр на весь экран,
+       кнопки админа, формы, сообщения входа
+   ========================================================= */
+
+/* ---- Фото в новостях/статьях: показываются целиком ---- */
+.photo-link { display: block; }
+
+body.home-page .news-img,
+body.home-page .article-img {
+    display: block;
+    width: 100%;
+    height: auto;
+    max-height: none;
+    object-fit: contain;
+    margin: 10px 0;
+    border-radius: 8px;
+    background: #EEF2FA;
+    cursor: zoom-in;
+}
+
+.news-text,
+.article-text {
+    white-space: pre-line;
+    overflow-wrap: anywhere;
+}
+
+/* ---- Фото на весь экран (чистый CSS, без JavaScript) ----
+   Клик по фото → адрес получает #photo-… → срабатывает :target.
+   Клик по затемнённому фону → возврат к карточке. */
+.lightbox {
+    display: none;
+    position: fixed;
+    inset: 0;
+    z-index: 1000;
+    align-items: center;
+    justify-content: center;
+    padding: 12px;
+    background: rgba(0, 10, 30, 0.93);
+    cursor: zoom-out;
+}
+
+.lightbox:target { display: flex; }
+
+.lightbox img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+    border-radius: 4px;
+}
+
+.lightbox::after {
+    content: "✕";
+    position: absolute;
+    top: calc(10px + env(safe-area-inset-top, 0px));
+    right: 12px;
+    width: 42px;
+    height: 42px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 20px;
+    color: #FFFFFF;
+    background: rgba(255, 255, 255, 0.18);
+}
+
+/* ---- Статьи: «Читать полностью» (чекбокс + label, без JavaScript) ---- */
+.article-text { margin-top: 8px; line-height: 1.5; }
+
+.article-body.clamp {
+    display: -webkit-box;
+    -webkit-line-clamp: 5;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+.more-toggle:checked + .article-body.clamp {
+    display: block;
+    overflow: visible;
+    -webkit-line-clamp: unset;
+}
+
+.article-more {
+    display: inline-block;
+    margin-top: 8px;
+    font-weight: 600;
+    color: #0033A0;
+    cursor: pointer;
+}
+
+.article-more:hover { color: #E30613; }
+
+.article-more .t-less { display: none; }
+.more-toggle:checked ~ .article-more .t-more { display: none; }
+.more-toggle:checked ~ .article-more .t-less { display: inline; }
+
+/* ---- Кнопки админа ---- */
+.item-actions {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 10px;
+    margin-top: 14px;
+}
+
+.item-actions form { margin: 0; }
+
+.btn-small {
+    display: inline-block;
+    width: auto;
+    margin: 0;
+    padding: 8px 16px;
+    border: 1px solid #0033A0;
+    border-radius: 8px;
+    font: inherit;
+    font-size: 14px;
+    font-weight: 600;
+    text-decoration: none;
+    color: #0033A0;
+    background: #FFFFFF;
+    cursor: pointer;
+}
+
+.btn-small:hover { background: #0033A0; color: #FFFFFF; }
+
+.btn-danger {
+    border-color: #E30613;
+    color: #E30613;
+}
+
+.btn-danger:hover { background: #E30613; color: #FFFFFF; }
+
+/* ---- Формы (дополняют ваш .news-form из раздела 20) ---- */
+.news-form input[type="text"],
+.news-form input[type="email"],
+.news-form input[type="password"] {
+    width: 100%;
+    padding: 10px;
+    font: inherit;
+    color: #0B1A33;
+    background: #FFFFFF;
+    border: 1px solid #B8C6E0;
+    border-radius: 8px;
+}
+
+.news-form input:focus,
+.news-form textarea:focus {
+    outline: 2px solid #0033A0;
+    outline-offset: 1px;
+}
+
+.file-label,
+.check-label {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    font-size: 14px;
+    color: #5A6B87;
+}
+
+.check-label {
+    flex-direction: row;
+    align-items: center;
+    gap: 8px;
+}
+
+.item-actions .news-submit { align-self: center; }
+
+.form-hint {
+    font-size: 13px;
+    color: #5A6B87;
+}
+
+/* ---- Сообщения ---- */
+.auth-flash {
+    width: 100%;
+    max-width: 700px;
+    margin-top: 16px;
+    padding: 12px 16px;
+    border-radius: 10px;
+    border-top: 4px solid #E30613;
+    background: rgba(255, 255, 255, 0.95);
+    color: #E30613;
+    font-weight: 600;
+    text-align: center;
+    box-shadow: 0 4px 12px rgba(0, 20, 80, 0.25);
 }

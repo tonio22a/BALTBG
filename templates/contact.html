@@ -2,16 +2,57 @@
 
 {% block title %}Контакты{% endblock %}
 
+{% block body_class %}home-page{% endblock %}
+
 {% block content %}
-<!-- Верхняя панель -->
-<div class="header-container">
-    <div class="faq">
-        <div class="faq-content">
-                <p><b>Вы можете использовать Telegram для связи с администраторами канала "Балтийский Берег"</b></p>
-                <p class="spacer">⠀</p>
-                <p>Telegram: @baltbereg1bot</p>
-                <p>Telegram-Канал: @baltbereg1</p>
-        </div>
+<h1>КОНТАКТЫ</h1>
+<h2>Связь с администрацией</h2>
+
+<a href="#owners" class="home-link">
+    <button type="button" class="home-btn">Владельцы канала</button>
+</a>
+
+<a href="https://t.me/baltbereg1" target="_blank" rel="noopener noreferrer" class="home-link">
+    <button type="button" class="home-btn">Telegram-канал</button>
+</a>
+<a href="https://t.me/baltbereg1bot" target="_blank" rel="noopener noreferrer" class="home-link">
+    <button type="button" class="home-btn">Telegram-бот</button>
+</a>
+
+<section id="owners" aria-labelledby="owners-title" style="width: 100%; max-width: 760px; margin-top: 35px; scroll-margin-top: 20px;">
+    <h2 id="owners-title">Кто стоит за «Балтийским берегом»</h2>
+
+    <div class="info-card">
+        <div class="info-title">Александр Щербатых — автор материалов</div>
+        <p>
+            Пишу посты, освещаю новости и трансферы футбольного клуба «Балтика»,
+            готовлю статьи и собираю статистику. Стараюсь не просто рассказывать
+            о событиях, а объяснять, что за ними стоит и как они влияют на команду.
+        </p>
     </div>
-</div>
+
+    <div class="info-card">
+        <div class="info-title">Степан Язев - автор изображений и статистики</div>
+        <p>
+            Отвечает за визуальное оформление канала: создаёт изображения и
+            иллюстрации к публикациям, а также собирает и подготавливает
+            статистические материалы, чтобы важная информация о «Балтике»
+            была наглядной и понятной читателям.
+        </p>
+    </div>
+
+    <div class="info-card">
+        <div class="info-title">О проекте</div>
+        <p>
+            «Балтийский берег» — канал о футбольном клубе «Балтика».
+            Мы хотим, чтобы болельщики могли узнавать свежие новости и информацию
+            о трансферах, знакомиться с интересной статистикой, следить за матчами
+            и лучше понимать, что происходит вокруг команды.
+        </p>
+    </div>
+</section>
+
+<a href="/" class="home-link">
+    <button type="button" class="home-btn">На главную</button>
+</a>
 {% endblock %}

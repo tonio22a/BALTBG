@@ -1,0 +1,89 @@
+{% extends "base.html" %}
+
+{% block title %}Календарь матчей{% endblock %}
+
+{% block body_class %}home-page{% endblock %}
+
+{% block content %}
+<h1>КАЛЕНДАРЬ МАТЧЕЙ</h1>
+<h2>Балтийский Берег</h2>
+
+{% if months %}
+<div class="cal-pager">
+    <button type="button" class="cal-nav" id="calPrev" aria-label="Предыдущий месяц">‹</button>
+    <div class="cal-head">
+        <div class="cal-title" id="calTitle">{{ months[start].title }}</div>
+        <div class="cal-count" id="calCount"></div>
+    </div>
+    <button type="button" class="cal-nav" id="calNext" aria-label="Следующий месяц">›</button>
+</div>
+
+<div class="cal-viewport" id="calViewport">
+    {% for month in months %}
+    <section class="cal-slide" data-title="{{ month.title }}" data-count="{{ month.matches|length }}">
+        <div class="match-grid">
+            {% for m in month.matches %}
+            <div class="match-card{% if m.past %} match-past{% endif %}{% if m.next %} match-next{% endif %}">
+                <img class="match-logo" src="{{ m.logo }}" alt="{{ m.name }}" loading="lazy"
+                     onerror="this.style.display='none';this.nextElementSibling.style.display='flex';">
+                <div class="match-logo match-logo-ph" style="display:none; background: {{ m.color }};">{{ m.short }}</div>
+                <div class="match-name">{{ m.name }}</div>
+                <div class="match-date">{{ m.date_text }}</div>
+                {% if m.score %}
+                    <div class="match-score score-{{ m.result }}">{{ m.score }}{% if m.pen %}<small> (пен. {{ m.pen }})</small>{% endif %}</div>
+                {% else %}
+                    <div class="match-time">{{ m.time_text }}</div>
+                {% endif %}
+                <div class="match-venue {{ 'is-home' if m.home else 'is-away' }}">{{ 'Дома' if m.home else 'В гостях' }}</div>
+                {% if m.tournament %}<div class="match-tournament">{{ m.tournament }}</div>{% endif %}
+            </div>
+            {% endfor %}
+        </div>
+    </section>
+    {% endfor %}
+</div>
+
+<div class="cal-note">Время калининградское (МСК +1 час).<br>* — дата весеннего тура предварительная.</div>
+
+<script>
+(function () {
+    var vp = document.getElementById('calViewport');
+    var slides = vp.querySelectorAll('.cal-slide');
+    var title = document.getElementById('calTitle');
+    var count = document.getElementById('calCount');
+    var prev = document.getElementById('calPrev');
+    var next = document.getElementById('calNext');
+    var n = slides.length, cur = {{ start }};
+
+    function go(i, smooth) {
+        i = Math.max(0, Math.min(n - 1, i));
+        vp.scrollTo({ left: slides[i].offsetLeft - vp.offsetLeft, behavior: smooth ? 'smooth' : 'auto' });
+    }
+    function update() {
+        cur = Math.max(0, Math.min(n - 1, Math.round(vp.scrollLeft / slides[0].offsetWidth)));
+        title.textContent = slides[cur].dataset.title;
+        var c = +slides[cur].dataset.count;
+        count.textContent = c + ' ' + (c % 10 === 1 && c % 100 !== 11 ? 'матч'
+                          : (c % 10 >= 2 && c % 10 <= 4 && (c % 100 < 12 || c % 100 > 14)) ? 'матча' : 'матчей');
+        prev.disabled = cur === 0;
+        next.disabled = cur === n - 1;
+    }
+    prev.addEventListener('click', function () { go(cur - 1, true); });
+    next.addEventListener('click', function () { go(cur + 1, true); });
+    vp.addEventListener('scroll', update, { passive: true });
+    document.addEventListener('keydown', function (e) {
+        if (e.key === 'ArrowLeft') go(cur - 1, true);
+        if (e.key === 'ArrowRight') go(cur + 1, true);
+    });
+    window.addEventListener('resize', function () { go(cur, false); });
+
+    go(cur, false);
+    update();
+})();
+</script>
+{% else %}
+<div class="info-card info-empty">Матчи пока не добавлены.</div>
+{% endif %}
+
+<a href="/" class="home-link"><button type="button" class="home-btn">На главную</button></a>
+{% endblock %}

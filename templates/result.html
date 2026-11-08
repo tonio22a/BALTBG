@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Результаты викторины</title>
+    <!-- Подключаем ваш style.css -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<!-- Добавляем класс quiz-page, чтобы сработали общие стили фона -->
+<body class="quiz-page">
+    
+    <!-- Карточка результата -->
+    <div class="result-card">
+        <h1>Викторина завершена!</h1>
+        
+        <!-- Обернули score в span для красивого выделения -->
+        <h2>Ваш результат: <span>{{ score }}</span> из {{ total }}</h2>
+        
+        <!-- Ссылка-кнопка на главную (используем класс home-btn) -->
+        <a href="{{ url_for('home') }}" class="home-btn">На главную</a>
+    </div>
+
+        <div class="footer">
+            <a href="/contact"><button>Контакты</button></a>
+            <a href="https://t.me/baltbereg1" target="_blank"><button>Телеграм</button></a>
+            <h2>Балтийский Берег</h2>
+            <p>Сделано Project "AU"</p>
+        </div>
+
+</body>
+</html>
